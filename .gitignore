@@ -33,3 +33,4 @@ mvnw.cmd
 
 ### VS Code ###
 .vscode/
+.DS_Store
