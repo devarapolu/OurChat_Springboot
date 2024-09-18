@@ -39,6 +39,8 @@
             <div class="form-group">
                 <div class="input-group clearfix">
                     <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                    <button type="button" id="emoji-btn">😊</button>
+                    <emoji-picker id="emoji-picker" class="hidden"></emoji-picker>
                     <button type="submit" class="primary">Send</button>
                 </div>
             </div>
@@ -49,5 +51,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 <script src="/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-picker-element@^1"></script>
+
 </body>
 </html>

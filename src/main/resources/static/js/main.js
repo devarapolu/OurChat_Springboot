@@ -7,6 +7,9 @@ var messageForm = document.querySelector('#messageForm');
 var messageInput = document.querySelector('#message');
 var messageArea = document.querySelector('#messageArea');
 var connectingElement = document.querySelector('.connecting');
+var emojiPicker = document.querySelector('#emoji-picker');
+var emojiBtn = document.querySelector('#emoji-btn');
+
 
 var stompClient = null;
 var username = null;
@@ -15,6 +18,22 @@ var colors = [
     '#2196F3', '#32c787', '#00BCD4', '#ff5652',
     '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
 ];
+
+// Show or hide the emoji picker
+emojiBtn.addEventListener('click', function() {
+    if (emojiPicker.classList.contains('hidden')) {
+        emojiPicker.classList.remove('hidden');
+    } else {
+        emojiPicker.classList.add('hidden');
+    }
+});
+
+// Add the selected emoji to the message input
+emojiPicker.addEventListener('emoji-click', function(event) {
+    messageInput.value += event.detail.unicode;
+    emojiPicker.classList.add('hidden'); // Hide the picker after selecting an emoji
+});
+
 
 function connect(event) {
     username = document.querySelector('#name').value.trim();

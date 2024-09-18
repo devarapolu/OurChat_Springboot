@@ -27,8 +27,23 @@ body {
     clear: both;
 }
 
+#emoji-picker {
+    position: absolute;
+    bottom: 50px; /* Adjust based on your layout */
+    right: 20px; /* Adjust based on your layout */
+    z-index: 1000;
+}
+
 .hidden {
     display: none;
+}
+
+#emoji-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
 }
 
 .form-control {
